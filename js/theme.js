@@ -43,10 +43,16 @@
   function updateToggleButtons(theme) {
     var toggles = document.querySelectorAll('[data-theme-toggle]');
     toggles.forEach(function (btn) {
-      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
-      var label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+      var isDark = theme === 'dark';
+      btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      var label = isDark ? 'Dark mode is ON (Click to turn OFF)' : 'Dark mode is OFF (Click to turn ON)';
       btn.setAttribute('aria-label', label);
       btn.title = label;
+
+      var statusText = btn.querySelector('.theme-switch-status');
+      if (statusText) {
+        statusText.textContent = isDark ? 'ON' : 'OFF';
+      }
       
       var sunIcon = btn.querySelector('.theme-icon-sun');
       var moonIcon = btn.querySelector('.theme-icon-moon');

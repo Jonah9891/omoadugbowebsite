@@ -13,8 +13,8 @@
       <div class="container header-inner">
         <!-- Logo / Wordmark -->
         <a href="/" class="site-logo" aria-label="Badagry West LCDA Home">
-          <span class="site-logo-badge" aria-hidden="true">BW</span>
-          <span>Badagry West LCDA</span>
+          <img src="/images/logo_dark_version.png" alt="Badagry West LCDA Logo" class="site-logo-img logo-dark-theme" width="240" height="66">
+          <img src="/images/Logo_light_version.png" alt="Badagry West LCDA Logo" class="site-logo-img logo-light-theme" width="240" height="66" style="display:none;">
         </a>
 
         <!-- Desktop Navigation (7 items per 02-SITEMAP.md) -->
@@ -118,10 +118,15 @@
 
         <!-- Header Controls (Right) -->
         <div class="header-actions">
-          <!-- Sun/Moon Theme Switch -->
-          <button type="button" class="btn btn-sm btn-secondary" data-theme-toggle aria-label="Switch theme" aria-pressed="false" style="padding: 0 0.75rem; height: 40px; border-radius: 999px;">
-            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <!-- Sun/Moon Theme Switch (With ON/OFF Switch Pill Indicator) -->
+          <button type="button" class="theme-switch-btn" data-theme-toggle aria-label="Dark mode is ON" aria-pressed="true">
+            <span class="theme-switch-track" aria-hidden="true">
+              <span class="theme-switch-thumb">
+                <svg class="theme-icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="theme-icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              </span>
+            </span>
+            <span class="theme-switch-status">ON</span>
           </button>
 
           <!-- Report a Concern CTA -->
@@ -247,20 +252,17 @@
     return `
     <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <!-- Emergency Helplines Strip -->
+        <!-- Central Secretariat Helpdesk Strip -->
         <div class="footer-emergency-strip">
           <div>
-            <div class="emergency-strip-title">Lagos State Emergency Helplines</div>
+            <div class="emergency-strip-title">Badagry West LCDA Secretariat Desk</div>
             <p style="font-size: 0.875rem; color: #A8A8A0; margin-top: 0.25rem;">
-              Toll-free 24-hour rapid response lines. For real emergencies only.
+              Direct administrative helpline for community enquiries, feedback, and citizen services.
             </p>
           </div>
           <div class="emergency-numbers-row">
-            <a href="tel:767" class="emergency-btn" aria-label="Call emergency 767">
-              <span style="color: #00E08A;">&#x260E;</span> 767
-            </a>
-            <a href="tel:112" class="emergency-btn" aria-label="Call emergency 112">
-              <span style="color: #00E08A;">&#x260E;</span> 112
+            <a href="tel:+2348037619499" class="emergency-btn" aria-label="Call Secretariat Desk">
+              <span style="color: #C9A227;">&#x260E;</span> +234 803 761 9499
             </a>
           </div>
         </div>
@@ -269,10 +271,9 @@
         <div class="footer-main-grid">
           <!-- Col 1: Council Identity -->
           <div>
-            <div class="site-logo" style="margin-bottom: 1rem; color: #FFFFFF;">
-              <span class="site-logo-badge" style="border-color: #C9A227; color: #C9A227;">BW</span>
-              <span>Badagry West LCDA</span>
-            </div>
+            <a href="/" class="site-logo" style="margin-bottom: 1rem;" aria-label="Badagry West LCDA Home">
+              <img src="/images/logo_dark_version.png" alt="Badagry West LCDA Logo" class="site-logo-img" width="255" height="72">
+            </a>
             <p style="font-size: 0.875rem; line-height: 1.6; color: #A8A8A0; max-width: 320px; margin-bottom: 1.25rem;">
               The official website of Badagry West Local Council Development Area, Lagos State. Leadership, projects, services and news from your council.
             </p>
@@ -339,7 +340,59 @@
     `;
   }
 
+  function getPreloaderHTML() {
+    return `
+    <div id="site-preloader" class="site-preloader" role="status" aria-live="polite" aria-label="Loading page content">
+      <div class="preloader-emblem">
+        <div class="preloader-ring-outer" aria-hidden="true"></div>
+        <div class="preloader-ring-inner" aria-hidden="true"></div>
+        <div class="preloader-logo-wrap">
+          <img src="/images/logo_dark_version.png" alt="Badagry West Crest" width="36" height="36">
+        </div>
+      </div>
+      <div class="preloader-text-group">
+        <div class="preloader-title">Badagry West LCDA</div>
+        <div class="preloader-subtext">Lagos State</div>
+        <div class="preloader-bar-track">
+          <div class="preloader-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+    `;
+  }
+
+  function handlePreloader() {
+    var preloader = document.getElementById('site-preloader');
+    if (!preloader) {
+      document.body.insertAdjacentHTML('afterbegin', getPreloaderHTML());
+      preloader = document.getElementById('site-preloader');
+    }
+
+    function dismiss() {
+      if (preloader && !preloader.classList.contains('is-loaded')) {
+        preloader.classList.add('is-loaded');
+        setTimeout(function () {
+          if (preloader.parentNode) {
+            preloader.parentNode.removeChild(preloader);
+          }
+        }, 550);
+      }
+    }
+
+    if (document.readyState === 'complete') {
+      setTimeout(dismiss, 350);
+    } else {
+      window.addEventListener('load', function () {
+        setTimeout(dismiss, 350);
+      });
+      // Fallback auto-dismiss after 2.5s in case of slow resources
+      setTimeout(dismiss, 2500);
+    }
+  }
+
   function injectLayout() {
+    // 0. Initialize animated preloader
+    handlePreloader();
     // 1. Inject Header if placeholder element exists or at top of body
     var headerContainer = document.querySelector('[data-layout-header]');
     if (headerContainer) {
@@ -348,11 +401,14 @@
       document.body.insertAdjacentHTML('afterbegin', getHeaderHTML());
     }
 
-    // 2. Inject Footer if placeholder element exists or at end of body
+    // 2. Inject Footer if placeholder element exists, or replace empty footer tags
     var footerContainer = document.querySelector('[data-layout-footer]');
+    var existingFooter = document.querySelector('footer.site-footer, #site-footer');
     if (footerContainer) {
       footerContainer.outerHTML = getFooterHTML();
-    } else if (!document.querySelector('.site-footer')) {
+    } else if (existingFooter) {
+      existingFooter.outerHTML = getFooterHTML();
+    } else {
       document.body.insertAdjacentHTML('beforeend', getFooterHTML());
     }
 
