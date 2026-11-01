@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback &amp; Complaints | Badagry West LCDA</title>
+  <meta name="description" content="Submit community feedback, report municipal concerns, or log service complaints directly to the Badagry West LCDA administration.">
+  <link rel="canonical" href="https://badagrywest.lg.gov.ng/contact/feedback-complaints/">
+  
+  <script src="/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header id="site-header" class="site-header">
+    <noscript>
+      <div class="container" style="padding: 1rem 0; text-align: center;">
+        <a href="/" style="font-weight: bold; color: var(--gold);">Badagry West LCDA</a> ·
+        <a href="/contact/">Contact</a> ·
+        <a href="/contact/feedback-complaints/">Feedback &amp; Complaints</a>
+      </div>
+    </noscript>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Opener (Template T7b) -->
+    <section class="page-opener" style="padding: var(--space-12) 0 var(--space-8); background: linear-gradient(to bottom, var(--surface), var(--bg)); border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="breadcrumb-separator" aria-hidden="true">›</span>
+          <a href="/contact/">Contact</a>
+          <span class="breadcrumb-separator" aria-hidden="true">›</span>
+          <span aria-current="page">Feedback &amp; Complaints</span>
+        </nav>
+
+        <span class="eyebrow">Your Voice</span>
+        <h1 class="page-title" style="font-family: var(--font-display); font-size: clamp(2.25rem, 4vw, 3.25rem); font-weight: 700; line-height: 1.15; margin-top: var(--space-2); margin-bottom: var(--space-4);">
+          Feedback and complaints, <em style="font-style: italic; color: var(--gold);">heard and handled.</em>
+        </h1>
+        <p class="lead" style="max-width: 68ch; color: var(--text-muted); font-size: 1.125rem; line-height: 1.6; margin-bottom: 0;">
+          Tell us what is working and what is not. Every message is read by the council office.
+        </p>
+      </div>
+    </section>
+
+    <!-- Complaint Form Section -->
+    <section class="section" style="padding: var(--space-12) 0 var(--space-16); background: var(--bg);">
+      <div class="container" style="max-width: 800px;">
+        
+        <!-- Guidance Box -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-6); margin-bottom: var(--space-8);">
+          <div style="display: flex; gap: var(--space-4); align-items: flex-start;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--gold-soft); color: var(--gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0;" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <div>
+              <h3 style="font-family: var(--font-display); font-size: 1.125rem; font-weight: 700; margin-bottom: var(--space-2);">
+                How we handle your concern
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.9375rem; line-height: 1.6; margin-bottom: var(--space-2);">
+                Please include the location, what happened and, if you like, how we can reach you. For emergencies, call 767 or 112 instead.
+              </p>
+              <div style="font-size: 0.8125rem; color: var(--text-muted); font-style: italic;">
+                Submissions are delivered directly to the council administration and are never made public.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Redress Form -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-8); box-shadow: var(--shadow-sm);">
+          <form data-bwl-form="complaint" novalidate>
+            <!-- Honeypot -->
+            <div style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">
+              <label for="complaint-gotcha">Leave this empty</label>
+              <input id="complaint-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+              <input type="hidden" name="form_type" value="complaint">
+              <input type="hidden" name="_subject" value="Website complaint / civic concern">
+            </div>
+
+            <!-- Full Name -->
+            <div class="form-group" style="margin-bottom: var(--space-4);">
+              <label for="complaint-name" class="form-label" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: var(--space-1);">
+                Full name <span style="color: var(--gold); font-weight: 700;">*</span>
+              </label>
+              <input id="complaint-name" type="text" name="name" class="form-input" required placeholder="Your full name" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg); color: var(--text);">
+            </div>
+
+            <div class="grid grid-2" style="gap: var(--space-4); margin-bottom: var(--space-4);">
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="complaint-phone" class="form-label" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: var(--space-1);">
+                  Phone number <span style="color: var(--gold); font-weight: 700;">*</span>
+                </label>
+                <input id="complaint-phone" type="tel" name="phone" class="form-input" required placeholder="080 0000 0000" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg); color: var(--text);">
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="complaint-email" class="form-label" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: var(--space-1);">
+                  Email address (optional)
+                </label>
+                <input id="complaint-email" type="email" name="email" class="form-input" placeholder="name@example.ng" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg); color: var(--text);">
+              </div>
+            </div>
+
+            <div class="grid grid-2" style="gap: var(--space-4); margin-bottom: var(--space-4);">
+              <!-- Ward -->
+              <div class="form-group">
+                <label for="complaint-ward" class="form-label" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: var(--space-1);">
+                  Ward <span style="color: var(--gold); font-weight: 700;">*</span>
+                </label>
+                <select id="complaint-ward" name="ward" class="form-input" required style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg); color: var(--text);">
+                  <option value="" disabled selected>Select your ward</option>
+                  <option value="Ward A Kweme">Ward A · Kweme</option>
+                  <option value="Ward B Wesere">Ward B · Wesere</option>
+                  <option value="Ward C Apa">Ward C · Apa</option>
+                  <option value="Ward D Akoro">Ward D · Akoro</option>
+                  <option value="Ward E Gbethrome">Ward E · Gbethrome</option>
+                  <option value="Not sure">Not sure</option>
+                </select>
+              </div>
+
+              <!-- Type -->
+              <div class="form-group">
+                <label for="complaint-type" class="form-label" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: var(--space-1);">
+                  Concern Type <span style="color: var(--gold); font-weight: 700;">*</span>
+                </label>
+                <select id="complaint-type" name="type" class="form-input" required style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg); color: var(--text);">
+                  <option value="" disabled selected>Select category</option>
+                  <option value="Service delivery">Service delivery</option>
+                  <option value="Infrastructure">Infrastructure (Roads, Drainages, Water)</option>
+                  <option value="Environment">Environment &amp; Sanitation</option>
+                  <option value="Revenue and levies">Revenue and levies</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Subject -->
+            <div class="form-group" style="margin-bottom: var(--space-4);">
+              <label for="complaint-subject" class="form-label" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: var(--space-1);">
+                Subject <span style="color: var(--gold); font-weight: 700;">*</span>
+              </label>
+              <input id="complaint-subject" type="text" name="subject" class="form-input" required placeholder="Brief summary of concern" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg); color: var(--text);">
+            </div>
+
+            <!-- Message -->
+            <div class="form-group" style="margin-bottom: var(--space-6);">
+              <label for="complaint-message" class="form-label" style="display: block; font-size: 0.875rem; font-weight: 600; margin-bottom: var(--space-1);">
+                Details &amp; Location (min 10 characters) <span style="color: var(--gold); font-weight: 700;">*</span>
+              </label>
+              <textarea id="complaint-message" name="message" class="form-input" rows="6" required placeholder="Describe what happened, the specific street/location, and any relevant details..." style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg); color: var(--text); resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Submit Redress Concern
+            </button>
+
+            <div style="font-size: 0.8125rem; color: var(--text-muted); text-align: center; margin-top: var(--space-3);">
+              Your submission is private and protected per our <a href="/privacy/" style="color: var(--gold); text-decoration: underline;">Privacy Policy</a>.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="/js/nav.js"></script>
+  <script src="/js/reveal.js"></script>
+  <script src="/js/forms.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

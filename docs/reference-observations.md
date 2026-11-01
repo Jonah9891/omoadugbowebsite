@@ -142,3 +142,114 @@ Study of the reference website: **https://iruvilcda.lg.gov.ng/about/executive-co
   - Semantic flowchart using HTML and CSS showing structural governance relationships: Executive Chairman &rarr; Vice Chairman &rarr; Secretary to the Local Government &rarr; Senior Bureaucrats & Supervisors &rarr; Line Departments. Boxes show positions only without personal names to remain durable.
 - **Legislative Council Layout:**
   - Overview of ward lawmaking and oversight mandate, followed by councillor cards in rank order (Council Leader, Deputy Leader, Majority Leader, Chief Whip, Deputy Chief Whip), each carrying ward and community tags.
+
+
+## Phase 6 — Departments & Services
+
+Study of the reference website: **https://iruvilcda.lg.gov.ng/departments** and Department Detail Page
+
+### 1. Structural Rhythm & Layout Anatomy
+- **Overview Page (Template T4a):**
+  - Page Opener: Eyebrow (`Service Network`), Display Title (`Departments *behind everyday service.*`), Lead paragraph outlining administrative coordination.
+  - Core Service Group Cards: Three primary cluster cards (Public Services & Business; Health, Education & Social Welfare; Works, Environment & Agriculture) each summarizing core responsibilities and linking into grouped pages.
+  - Portfolio Chips: Highlights secondary mandates (Budget, Chieftaincy & Boundary, Tourism & Culture, Civic Engagement).
+- **Grouped Service Pages (Template T4b):**
+  - Each service area features an anchored section with `scroll-margin-top` offset for the sticky header.
+  - Section Anatomy: Service title, introductory mandate, "What this office does" bulleted competencies, related council initiatives, and clean pathways to Contact or Feedback & Complaints.
+  - No individual phone numbers or personal emails are exposed; all inquiries route through the official secretariat desk.
+
+
+---
+
+## Phase 7 — Projects & Development
+
+Studied https://iruvilcda.lg.gov.ng/projects and individual project detail presentations.
+
+### 1. Stats and Metrics Presentation
+- **Reference observation:** Clear categorical counters showing portfolio scale and active execution status.
+- **Our Implementation:**
+  - A prominent 4-metric statistics strip atop /projects/ featuring:
+    - **Total Projects** (total active portfolio)
+    - **Completed** (delivered infrastructure and civic assets)
+    - **Ongoing** (active constructions, including Asheri PHC and Ganyingbo CBT)
+    - **Planned** (forthcoming council initiatives)
+  - All counter metrics dynamically recalculate to reflect the visible filtered set.
+
+### 2. Dual Filtering Architecture
+- **Reference observation:** Clean, pill-based category filter chips with immediate visual state feedback.
+- **Our Implementation:**
+  - Two distinct filter bars: **Execution Status** (All, Ongoing, Completed, Planned) and **Project Type** (All, Infrastructure, Community, Education, Health, Environment).
+  - Strict bi-directional URL synchronization: reads query parameters (?status=... and ?type=...) on page load and writes updated parameters to window.history.pushState on chip interaction without full page reload.
+  - Full compatibility with the multi-level navigation menu links defined in docs/02-SITEMAP.md.
+
+### 3. Visual Tags & Status Hierarchy
+- **Reference observation:** Distinct color-coded pills communicating project health.
+- **Our Implementation:**
+  - Status tags adhere strictly to our design system:
+    - **Ongoing:** Cyber Green soft background (ar(--green-soft)), cyber green border, active pulse icon.
+    - **Completed:** Gold soft background (ar(--gold-soft)), gold border (ar(--gold)), check badge.
+    - **Planned:** Neutral subtle background with refined hairline border.
+
+### 4. Detail Page Architecture & Record Snapshot
+- **Reference observation:** High-impact hero presentation followed by structured metadata panel, deep description, and secondary gallery record.
+- **Our Implementation:**
+  - Opener with breadcrumbs, title, status tag, type badge, and community location.
+  - Project imagery with main showcase photo and secondary photo gallery records.
+  - **Record Snapshot Panel:** Clean tabular/grid card highlighting Status, Category, Ward/Location, Target Year, and Official Verification status (omitting any unsupplied or unconfirmed details).
+  - Related projects card cluster and direct inquiry call-to-action routing to /contact/feedback-complaints/.
+
+---
+
+## Phase 8 — News & Photo Gallery
+
+Studied `https://iruvilcda.lg.gov.ng/news` and `https://iruvilcda.lg.gov.ng/gallery`.
+
+### 1. News & Editorial Index
+- **Reference observation:** Clean, structured card layout with clear metadata (category pill, publication date, reading time), high-contrast serif headlines, concise lead excerpts, and pagination controls.
+- **Our Implementation:**
+  - `/news/` with category filter pills: `All`, `News`, `Official Announcements`, `Events`.
+  - Reads `?category=` from URL so deep-links like `/news/?category=announcements` from `docs/02-SITEMAP.md` activate the filter on load and update URL state smoothly.
+  - Client-side pagination (12 items per page) with previous/next controls and page number indicators.
+  - Formatted publication dates strictly in "29 July 2026" standard.
+  - Detail article pages generated for confirmed items with reading time, hero image, article body, related news, and civic sharing links.
+
+### 2. Photo Gallery & Lightbox Architecture
+- **Reference observation:** Card grid presenting photographic archives by album, displaying cover image, category tag, photo count badge, title, and event date.
+- **Our Implementation:**
+  - `/gallery/` displaying an album grid built strictly from verified existing photographs.
+  - Accessible Lightbox Modal (`js/gallery.js`):
+    - Keyboard arrow navigation (Left/Right to cycle images).
+    - Escape key to close modal.
+    - Focus trap inside active modal; returns focus cleanly to the activating thumbnail upon closing.
+    - Descriptive photo captions and counter indicator (e.g. `2 of 6`).
+    - Touch swipe navigation support for mobile and tablet screens.
+    - Fully styled for both Dark and Light themes with high-contrast accessibility.
+
+---
+
+## Phase 9 — Contact, Forms & Utility Pages
+
+Studied `https://iruvilcda.lg.gov.ng/contact`.
+
+### 1. Contact Architecture & Civic Location
+- **Reference observation:** Two-column split layout pairing official secretariat contact channels (address, operating hours, telephone, email) with an intake form; full-width map and directions band beneath.
+- **Our Implementation:**
+  - `/contact/`:
+    - Left column (`#contact-information`): Physical secretariat address at Kankon, telephone/WhatsApp with tap-to-call link, public email, official office hours, social channels, and prominent 24/7 Lagos emergency lines callout (`767` and `112`).
+    - Right column: Clean contact form (Full Name, Email, Phone, Subject, Message) with accessible validation, off-screen honeypot, and privacy consent line.
+    - Full-width Office Location (`#office-location`): Accessible map embed container with dual-theme styling and a direct "Get Directions" action querying the Secretariat location.
+  - `/contact/feedback-complaints/`: Dedicated citizen grievance redress form with Ward selector (Wards A–E or Not Sure), complaint type categorization, subject, and detailed message field. Submissions remain strictly private and are never displayed publicly.
+
+### 2. Form Engine & Verification Integrity
+- **Our Implementation (`js/forms.js`):**
+  - Robust client-side validation with live error indicators.
+  - Honeypot field (`_gotcha`) hidden off-screen to intercept automated spam bots.
+  - Anti-spam submission throttling (15-second rate limit).
+  - Explicit checking of the Formspree endpoint in `data/site.json`: while unset (`[PLACEHOLDER]`), forms display a helpful advisory notice and strictly prevent misleading success notifications.
+  - Security guarantee: Form delivery address (`admin@omoadugbo.com`) is never leaked into client HTML page sources.
+
+### 3. Utility Pages
+- **404 Page (`404.html`):** Authoritative, branded error page with Playfair Display numeral, empathetic civic copy, and primary navigation buttons to Home, Projects, News, and Contact.
+- **Privacy Policy (`/privacy/`):** Plain, factual explanation of data collection (form submissions only, no tracking, dark/light mode preference storage), strictly reflecting actual operational behavior without legalese.
+
+

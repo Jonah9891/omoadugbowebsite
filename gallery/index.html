@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Badagry West LCDA</title>
+  <meta name="description" content="Explore photographic records of civic projects, empowerment distributions, and community landmarks across Badagry West LCDA, Lagos State.">
+  <link rel="canonical" href="https://badagrywest.lg.gov.ng/gallery/">
+  
+  <script src="/js/theme.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header id="site-header" class="site-header">
+    <noscript>
+      <div class="container" style="padding: 1rem 0; text-align: center;">
+        <a href="/" style="font-weight: bold; color: var(--gold);">Badagry West LCDA</a> ·
+        <a href="/news/">News</a> ·
+        <a href="/gallery/">Gallery</a>
+      </div>
+    </noscript>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Opener (Template T6c) -->
+    <section class="page-opener" style="padding: var(--space-12) 0 var(--space-8); background: linear-gradient(to bottom, var(--surface), var(--bg)); border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="breadcrumb-separator" aria-hidden="true">›</span>
+          <span aria-current="page">Gallery</span>
+        </nav>
+
+        <span class="eyebrow">Visual Archive</span>
+        <h1 class="page-title" style="font-family: var(--font-display); font-size: clamp(2.25rem, 4vw, 3.25rem); font-weight: 700; line-height: 1.15; margin-top: var(--space-2); margin-bottom: var(--space-4);">
+          Our work, <em style="font-style: italic; color: var(--gold);">in pictures.</em>
+        </h1>
+        <p class="lead" style="max-width: 68ch; color: var(--text-muted); font-size: 1.125rem; line-height: 1.6; margin-bottom: 0;">
+          Photographs from projects, programmes and community events across Badagry West.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section class="section" style="padding: var(--space-12) 0 var(--space-16); background: var(--bg);">
+      <div class="container">
+        <div id="gallery-grid" class="grid grid-2">
+          <!-- Populated dynamically from data/gallery.json -->
+        </div>
+
+        <div style="margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid var(--border); text-align: center;">
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0;">
+            All images are authentic photographic records of Badagry West Local Council Development Area initiatives.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Lightbox Modal -->
+  <div id="gallery-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image Lightbox Viewer">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-dialog">
+      <!-- Close Button -->
+      <button id="lightbox-close" type="button" class="lightbox-btn lightbox-btn-close" aria-label="Close Lightbox (Press Escape)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <!-- Frame & Image -->
+      <div class="lightbox-frame">
+        <button id="lightbox-prev" type="button" class="lightbox-btn lightbox-btn-prev" aria-label="Previous Photo (Left Arrow)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
+        <img id="lightbox-image" class="lightbox-img" src="" alt="">
+
+        <button id="lightbox-next" type="button" class="lightbox-btn lightbox-btn-next" aria-label="Next Photo (Right Arrow)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <!-- Caption & Counter -->
+      <div class="lightbox-meta">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+        <div id="lightbox-counter" class="lightbox-counter"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <script src="/js/nav.js"></script>
+  <script src="/js/reveal.js"></script>
+  <script src="/js/gallery.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    fetch('/data/gallery.json')
+      .then(res => res.json())
+      .then(data => {
+        if (window.initGallery) window.initGallery(data);
+      })
+      .catch(err => console.warn('Gallery load error:', err));
+  </script>
+</body>
+</html>
+

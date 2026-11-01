@@ -1,0 +1,87 @@
+[
+  {
+    "slug": "100-day-empowerment-programme",
+    "title": "100-Day Empowerment Programme",
+    "category": "Empowerment",
+    "date": "10 December 2025",
+    "cover": "empower-mega.jpg",
+    "summary": "Distribution of artisan tools, deep freezers, sewing machines, and financial grants across the five wards.",
+    "images": [
+      {
+        "src": "empower-mega.jpg",
+        "caption": "Mega Empowerment Programme gathering at the Council Secretariat in Kankon."
+      },
+      {
+        "src": "empower-tools.jpg",
+        "caption": "Artisan equipment including deep freezers, sewing machines, and generators presented to beneficiaries."
+      },
+      {
+        "src": "empower-vehicles.jpg",
+        "caption": "Official presentation of community logistics and mobility support vehicles."
+      }
+    ]
+  },
+  {
+    "slug": "healthcare-infrastructure-delivery",
+    "title": "Primary Healthcare Development",
+    "category": "Health",
+    "date": "15 January 2026",
+    "cover": "project-asheri-phc-1.jpg",
+    "summary": "Construction and structural equipping of the modern Asheri Primary Healthcare Centre.",
+    "images": [
+      {
+        "src": "project-asheri-phc-1.jpg",
+        "caption": "Ongoing construction work at the modern Asheri Primary Health Centre."
+      },
+      {
+        "src": "project-asheri-phc-2.jpg",
+        "caption": "Structural framing and ward facilities being developed at Asheri PHC."
+      }
+    ]
+  },
+  {
+    "slug": "digital-education-and-cbt-facilities",
+    "title": "Digital Education & CBT Infrastructure",
+    "category": "Education",
+    "date": "20 February 2026",
+    "cover": "project-ganyingbo-cbt-1.jpg",
+    "summary": "Development of the modern Computer-Based Test (CBT) and Tutorial Centre at Ganyingbo Topa.",
+    "images": [
+      {
+        "src": "project-ganyingbo-cbt-1.jpg",
+        "caption": "Exterior view of the Ganyingbo Topa CBT and Tutorial Centre under active construction."
+      },
+      {
+        "src": "project-ganyingbo-cbt-2.jpg",
+        "caption": "Interior examination terminals and workstation halls for secondary school candidates."
+      }
+    ]
+  },
+  {
+    "slug": "coastal-heritage-and-community",
+    "title": "Coastal Heritage & Communities",
+    "category": "Culture",
+    "date": "29 July 2026",
+    "cover": "hero-3-suntan-beach.jpg",
+    "summary": "Vibrant coastal scenes, cultural corridors, and community landmarks across Badagry West.",
+    "images": [
+      {
+        "src": "hero-3-suntan-beach.jpg",
+        "caption": "Atlantic coastline and recreation areas at Suntan Beach."
+      },
+      {
+        "src": "place-seme-border.jpg",
+        "caption": "Seme Border international crossing, gateway to the ECOWAS sub-region."
+      },
+      {
+        "src": "place-owode.jpg",
+        "caption": "Owode-Apa trade and agricultural corridor connecting rural communities."
+      },
+      {
+        "src": "hero-1-secretariat.jpg",
+        "caption": "Badagry West LCDA Legislative and Administrative Secretariat at Kankon."
+      }
+    ]
+  }
+]
+

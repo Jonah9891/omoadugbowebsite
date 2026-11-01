@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects &amp; Infrastructure Portfolio | Badagry West LCDA</title>
+  <meta name="description" content="Explore ongoing, completed, and planned projects delivered across health, education, roads, and community development in Badagry West LCDA, Lagos State.">
+  <link rel="canonical" href="https://badagrywest.lg.gov.ng/projects/">
+  
+  <!-- Critical Theme Script (Must be first in head to prevent FOUC) -->
+  <script src="/js/theme.js"></script>
+
+  <!-- Google Fonts: Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+
+  <style>
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+    }
+    .filter-label {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-right: var(--space-2);
+      white-space: nowrap;
+    }
+    .filter-chip {
+      padding: 0.375rem 0.875rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      background: var(--surface);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all var(--t-fast) var(--ease);
+      white-space: nowrap;
+    }
+    .filter-chip:hover {
+      color: var(--text);
+      border-color: var(--gold);
+      background: var(--surface-2);
+    }
+    .filter-chip.active {
+      background: var(--gold);
+      color: var(--on-gold);
+      border-color: var(--gold);
+      font-weight: 600;
+    }
+    .stat-counter-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: var(--space-4) var(--space-5);
+      text-align: center;
+      transition: border-color var(--t-fast) var(--ease);
+    }
+    .stat-counter-box:hover {
+      border-color: var(--gold);
+    }
+    .stat-counter-number {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: var(--space-1);
+    }
+    .stat-counter-label {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Header (Dynamic Injection via main.js) -->
+  <header id="site-header" class="site-header">
+    <noscript>
+      <div class="container" style="padding: 1rem 0; text-align: center;">
+        <a href="/" style="font-weight: bold; color: var(--gold);">Badagry West LCDA</a> ·
+        <a href="/about/">About</a> ·
+        <a href="/leadership/chairman-vice-chairman/">Leadership</a> ·
+        <a href="/departments/">Departments</a> ·
+        <a href="/projects/">Projects</a> ·
+        <a href="/news/">News</a> ·
+        <a href="/contact/">Contact</a>
+      </div>
+    </noscript>
+  </header>
+
+  <main id="main-content">
+    <!-- Page Opener (Template T5a) -->
+    <section class="page-opener" style="padding: var(--space-12) 0 var(--space-8); background: linear-gradient(to bottom, var(--surface), var(--bg)); border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="breadcrumb-separator" aria-hidden="true">›</span>
+          <span aria-current="page">Projects</span>
+        </nav>
+
+        <span class="eyebrow">Delivery Portfolio</span>
+        <h1 class="page-title" style="font-family: var(--font-display); font-size: clamp(2.25rem, 4vw, 3.25rem); font-weight: 700; line-height: 1.15; margin-top: var(--space-2); margin-bottom: var(--space-4);">
+          Projects, <em style="font-style: italic; color: var(--gold);">delivery in view.</em>
+        </h1>
+        <p class="lead" style="max-width: 68ch; color: var(--text-muted); font-size: 1.125rem; line-height: 1.6; margin-bottom: 0;">
+          A clear record of infrastructure, health, education and community work across Badagry West LCDA.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stats Strip & Filters Section -->
+    <section style="padding: var(--space-8) 0; background: var(--bg); border-bottom: 1px solid var(--border);">
+      <div class="container">
+        <!-- 4-Stat Strip (Recalculates dynamically with filter) -->
+        <div class="grid grid-4" style="margin-bottom: var(--space-8);">
+          <div class="stat-counter-box">
+            <div id="stat-total" class="stat-counter-number">6</div>
+            <div class="stat-counter-label">Total Projects</div>
+          </div>
+          <div class="stat-counter-box">
+            <div id="stat-completed" class="stat-counter-number" style="color: var(--gold);">3</div>
+            <div class="stat-counter-label">Completed</div>
+          </div>
+          <div class="stat-counter-box">
+            <div id="stat-ongoing" class="stat-counter-number" style="color: var(--green);">3</div>
+            <div class="stat-counter-label">Ongoing</div>
+          </div>
+          <div class="stat-counter-box">
+            <div id="stat-planned" class="stat-counter-number" style="color: var(--text-muted);">0</div>
+            <div class="stat-counter-label">Planned</div>
+          </div>
+        </div>
+
+        <!-- Filter Controls Bar -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-5) var(--space-6); display: flex; flex-direction: column; gap: var(--space-4);">
+          <!-- Status Filter -->
+          <div class="filter-group" role="group" aria-label="Filter by project status">
+            <span class="filter-label">Status:</span>
+            <button type="button" class="filter-chip active" data-filter-status="all" aria-pressed="true">All Statuses</button>
+            <button type="button" class="filter-chip" data-filter-status="ongoing" aria-pressed="false">Ongoing</button>
+            <button type="button" class="filter-chip" data-filter-status="completed" aria-pressed="false">Completed</button>
+            <button type="button" class="filter-chip" data-filter-status="planned" aria-pressed="false">Planned</button>
+          </div>
+
+          <div style="height: 1px; background: var(--border);"></div>
+
+          <!-- Type Filter -->
+          <div class="filter-group" role="group" aria-label="Filter by project type">
+            <span class="filter-label">Sector:</span>
+            <button type="button" class="filter-chip active" data-filter-type="all" aria-pressed="true">All Sectors</button>
+            <button type="button" class="filter-chip" data-filter-type="infrastructure" aria-pressed="false">Infrastructure</button>
+            <button type="button" class="filter-chip" data-filter-type="community" aria-pressed="false">Community</button>
+            <button type="button" class="filter-chip" data-filter-type="education" aria-pressed="false">Education</button>
+            <button type="button" class="filter-chip" data-filter-type="health" aria-pressed="false">Health</button>
+            <button type="button" class="filter-chip" data-filter-type="environment" aria-pressed="false">Environment</button>
+          </div>
+        </div>
+
+        <div style="margin-top: var(--space-4); display: flex; align-items: center; justify-content: space-between;">
+          <span id="visible-count-display" style="font-size: 0.875rem; color: var(--text-muted); font-weight: 500;">
+            Showing 6 projects
+          </span>
+          <span style="font-size: 0.8125rem; color: var(--text-muted); font-style: italic;">
+            Live portfolio records
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid Section -->
+    <section class="section" style="padding: var(--space-10) 0 var(--space-16);">
+      <div class="container">
+        <!-- Dynamic Projects Grid (Injected by js/projects.js) -->
+        <div id="projects-grid" class="grid grid-3">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Friendly Empty State (Hidden by default) -->
+        <div id="projects-empty-state" style="display: none; text-align: center; padding: var(--space-16) var(--space-6); background: var(--surface); border: 1px dashed var(--border-strong); border-radius: var(--radius-lg); margin-top: var(--space-4);">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: var(--gold-soft); color: var(--gold); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-4);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
+          <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; margin-bottom: var(--space-2);">
+            No projects match this filter yet.
+          </h3>
+          <p style="color: var(--text-muted); max-width: 48ch; margin: 0 auto var(--space-6); line-height: 1.6;">
+            We could not find any projects matching your current status and sector criteria. Try selecting another filter or reset to view all.
+          </p>
+          <button id="reset-filters-btn" type="button" class="btn btn-primary btn-sm">
+            Reset All Filters
+          </button>
+        </div>
+
+        <!-- Official Footnote per docs/07-CONTENT.md -->
+        <div style="margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid var(--border); text-align: center;">
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0;">
+            Project information is published only when confirmed by the council. Timelines appear when approved.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Band (Links to Empowerment & News) -->
+    <section style="background: var(--surface-2); border-top: 1px solid var(--border); padding: var(--space-12) 0;">
+      <div class="container text-center">
+        <span class="eyebrow">Grassroots Development</span>
+        <h2 style="font-family: var(--font-display); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; margin-top: var(--space-2); margin-bottom: var(--space-4);">
+          Building people alongside <em style="font-style: italic; color: var(--gold);">infrastructure.</em>
+        </h2>
+        <p style="max-width: 60ch; margin: 0 auto var(--space-8); color: var(--text-muted); font-size: 1.0625rem; line-height: 1.6;">
+          Our capital projects work hand-in-hand with human capital investments, vocational toolkits, and civic empowerment schemes across Badagry West.
+        </p>
+        <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+          <a href="/projects/empowerment/" class="btn btn-primary">
+            Explore Empowerment Programmes
+          </a>
+          <a href="/news/" class="btn btn-ghost">
+            Latest Council News &amp; Updates
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer (Dynamic Injection via main.js) -->
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="/js/nav.js"></script>
+  <script src="/js/reveal.js"></script>
+  <script src="/js/projects.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
+
