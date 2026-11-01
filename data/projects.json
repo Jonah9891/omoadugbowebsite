@@ -1,0 +1,101 @@
+[
+  {
+    "slug": "asheri-primary-health-centre",
+    "title": "Asheri Primary Health Centre",
+    "status": "ongoing",
+    "type": "health",
+    "typeName": "Health",
+    "date": "2026",
+    "location": "Asheri Community",
+    "summary": "A modern Primary Healthcare Centre is under construction in Asheri to bring essential medical services closer to residents.",
+    "body": [
+      "A modern Primary Healthcare Centre is under construction in Asheri to bring essential medical services closer to residents.",
+      "The centre will provide primary clinical care, maternal and child healthcare, and routine health screenings for the community."
+    ],
+    "images": ["project-asheri-phc-1.jpg", "project-asheri-phc-2.jpg"],
+    "featured": true,
+    "confirm": false
+  },
+  {
+    "slug": "ganyingbo-topa-cbt-centre",
+    "title": "Ganyingbo Topa CBT and Tutorial Centre",
+    "status": "ongoing",
+    "type": "education",
+    "typeName": "Education",
+    "date": "2026",
+    "location": "Ganyingbo Topa",
+    "summary": "A modern Computer-Based Test (CBT) Centre and Tutorial Centre to help students prepare for JAMB, WAEC and GCE examinations.",
+    "body": [
+      "A modern Computer-Based Test (CBT) Centre and Tutorial Centre to help students prepare for JAMB, WAEC and GCE examinations.",
+      "The facility provides high-speed digital examination terminals, reliable solar power, and specialized tutorial classes for secondary school candidates."
+    ],
+    "images": ["project-ganyingbo-cbt-1.jpg", "project-ganyingbo-cbt-2.jpg"],
+    "featured": true,
+    "confirm": false
+  },
+  {
+    "slug": "inner-roads-grading-and-sand-filling",
+    "title": "Inner Roads Grading and Sand-filling",
+    "status": "ongoing",
+    "type": "infrastructure",
+    "typeName": "Infrastructure",
+    "date": "2026",
+    "location": "Across 5 Wards",
+    "summary": "Grading and sand-filling of more than 50 inner roads across the five wards to ensure year-round community connectivity.",
+    "body": [
+      "Grading and sand-filling of more than 50 inner roads across the five wards to improve access for residents, traders, and agricultural goods."
+    ],
+    "images": ["project-inner-roads.jpg"],
+    "featured": true,
+    "confirm": true
+  },
+  {
+    "slug": "perimeter-fencing-sawa-primary-school",
+    "title": "Perimeter Fencing, Methodist Primary School, Sawa",
+    "status": "completed",
+    "type": "education",
+    "typeName": "Education",
+    "date": "2026",
+    "location": "Sawa Community",
+    "summary": "A model perimeter fence and school renovation for a safer and more secure learning environment.",
+    "body": [
+      "Construction of a comprehensive perimeter security fence and structural rehabilitation at Methodist Primary School, Sawa."
+    ],
+    "images": ["project-sawa-school.jpg"],
+    "featured": false,
+    "confirm": true
+  },
+  {
+    "slug": "perimeter-fencing-la-primary-school-apa",
+    "title": "Perimeter Fencing, L.A. Primary School, Apa",
+    "status": "completed",
+    "type": "education",
+    "typeName": "Education",
+    "date": "2026",
+    "location": "Apa Community",
+    "summary": "Perimeter fencing constructed at L.A. Primary School, Apa, safeguarding students and educational assets.",
+    "body": [
+      "Erection of a perimeter security wall enclosing the school compound to protect pupils and deter unauthorized entry."
+    ],
+    "images": ["project-apa-school.jpg"],
+    "featured": false,
+    "confirm": true
+  },
+  {
+    "slug": "solar-powered-borehole-akoko",
+    "title": "Solar-Powered Borehole, Akoko Community",
+    "status": "completed",
+    "type": "community",
+    "typeName": "Community",
+    "date": "2026",
+    "location": "Akoko Community",
+    "summary": "A solar-powered borehole to improve access to clean, reliable water for households and small businesses.",
+    "body": [
+      "Installation of a deep industrial borehole equipped with high-efficiency solar water pumps, overhead storage tanks, and multi-point dispensing taps."
+    ],
+    "images": ["project-akoko-borehole.jpg"],
+    "featured": false,
+    "confirm": true
+  }
+]
+

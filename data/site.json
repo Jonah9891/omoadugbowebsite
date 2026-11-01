@@ -1,0 +1,26 @@
+{
+  "name": "Badagry West Local Council Development Area",
+  "shortName": "Badagry West LCDA",
+  "tagline": "Closer to the People. Committed to Progress.",
+  "secretariat": "Council Secretariat, Owode-Apa Road, Kankon, Badagry, Lagos State",
+  "phone": "08037619499",
+  "phoneDisplay": "+234 803 761 9499",
+  "email": "support@omoadugbo.com",
+  "formDeliveryEmail": "admin@omoadugbo.com",
+  "formEndpoint": "[PLACEHOLDER]",
+  "hours": "Monday to Friday, 8:00 AM – 4:00 PM",
+  "emergencyLines": ["767", "112"],
+  "social": {
+    "facebook": "https://www.facebook.com/share/1HaJd9qiVB/",
+    "instagram": "https://www.instagram.com/rikayomoadugbo",
+    "whatsapp": "https://wa.me/2348037619499"
+  },
+  "wards": [
+    { "code": "A", "name": "Kweme" },
+    { "code": "B", "name": "Wesere" },
+    { "code": "C", "name": "Apa" },
+    { "code": "D", "name": "Akoro" },
+    { "code": "E", "name": "Gbethrome" }
+  ]
+}
+

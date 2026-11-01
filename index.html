@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en-NG" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Badagry West LCDA | Official Website</title>
+  <meta name="description" content="Official website of Badagry West LCDA, Lagos State. Meet our leaders, follow projects, read news and contact your council.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://[DOMAIN]/">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Badagry West LCDA | Official Website">
+  <meta property="og:description" content="Official website of Badagry West LCDA, Lagos State. Meet our leaders, follow projects, read news and contact your council.">
+  <meta property="og:image" content="/images/hero-1-secretariat.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- 1. Inline Theme Script (Before CSS to prevent white flash) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('bwl-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- 2. Google Fonts preconnect and load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <!-- 3. Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Shared Header Injection Placeholder -->
+  <div data-layout-header></div>
+
+  <!-- Fallback noscript Navigation -->
+  <noscript>
+    <nav class="container" style="padding: 1rem; background: var(--surface-2); border-bottom: 1px solid var(--border);" aria-label="Fallback Navigation">
+      <strong>Menu:</strong>
+      <a href="/" style="margin-right: 1rem;">Home</a>
+      <a href="/about/" style="margin-right: 1rem;">About Us</a>
+      <a href="/leadership/chairman-vice-chairman/" style="margin-right: 1rem;">Leadership</a>
+      <a href="/departments/" style="margin-right: 1rem;">Departments</a>
+      <a href="/projects/" style="margin-right: 1rem;">Projects</a>
+      <a href="/news/" style="margin-right: 1rem;">News</a>
+      <a href="/contact/">Contact Us</a>
+    </nav>
+  </noscript>
+
+  <main id="main">
+    <!-- ====================================================================
+         1. HERO SLIDER SECTION
+         ==================================================================== -->
+    <section class="hero-slider" data-slider aria-label="Featured council highlights">
+      <!-- Slide 1: Secretariat, Kankon -->
+      <div class="hero-slide is-active" data-slide aria-hidden="false">
+        <img src="/images/hero-1-secretariat.jpg" alt="Badagry West LCDA Council Secretariat at Kankon" class="hero-slide-bg" width="1920" height="1080" fetchpriority="high">
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <span class="fs-eyebrow" style="color: var(--gold);">Welcome to Badagry West LCDA</span>
+            <h1 class="fs-display">Governance that stands <span class="italic-accent">close to you.</span></h1>
+            <p class="fs-lead">
+              From our secretariat at Kankon, we are building a council that listens, delivers and answers to the people of Badagry West.
+            </p>
+            <div class="flex" style="flex-wrap: wrap; gap: 1rem; align-items: center;">
+              <a href="/projects/" class="btn btn-primary">Explore Our Projects</a>
+              <a href="/contact/feedback-complaints/" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">Report a Concern</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Seme Border -->
+      <div class="hero-slide" data-slide aria-hidden="true">
+        <img src="/images/hero-2-seme-border.jpg" alt="The Seme border crossing between Nigeria and the Republic of Benin" class="hero-slide-bg" width="1920" height="1080" loading="lazy">
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <span class="fs-eyebrow" style="color: var(--gold);">Gateway to West Africa</span>
+            <h2 class="fs-display">Where Nigeria meets <span class="italic-accent">the region.</span></h2>
+            <p class="fs-lead">
+              Every day, the Seme border carries trade, travellers and opportunity across West Africa, and it runs through Badagry West.
+            </p>
+            <div class="flex" style="flex-wrap: wrap; gap: 1rem; align-items: center;">
+              <a href="/about/communities-wards/" class="btn btn-primary">Explore Our Communities</a>
+              <a href="/departments/public-services-business/#business-trade" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">Business &amp; Trade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Suntan Beach -->
+      <div class="hero-slide" data-slide aria-hidden="true">
+        <img src="/images/hero-3-suntan-beach.jpg" alt="Suntan Beach, Badagry" class="hero-slide-bg" width="1920" height="1080" loading="lazy">
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <span class="fs-eyebrow" style="color: var(--gold);">Coastline and Culture</span>
+            <h2 class="fs-display">Golden shores. <span class="italic-accent">Growing future.</span></h2>
+            <p class="fs-lead">
+              Atlantic beaches, rich heritage and proud communities: the natural wealth that makes Badagry West a place to live, invest and visit.
+            </p>
+            <div class="flex" style="flex-wrap: wrap; gap: 1rem; align-items: center;">
+              <a href="/about/communities-wards/#places-to-visit" class="btn btn-primary">Places to Visit</a>
+              <a href="/contact/" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.4); color: #FFFFFF;">Contact the Council</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Bottom Frosted Glass Facts Bar -->
+      <div class="container" style="position: absolute; bottom: 1.25rem; left: 0; right: 0; z-index: 4;">
+        <div class="hero-facts-bar" style="margin-top: 0;">
+          <div class="flex items-center gap-2">
+            <span style="color: var(--gold); font-weight: 700;">5 Wards</span>
+            <span style="color: rgba(255,255,255,0.6);">&bull; Grassroots Representation</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span style="color: var(--gold); font-weight: 700;">Seme Border Gateway</span>
+            <span style="color: rgba(255,255,255,0.6);">&bull; Regional Trade Hub</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span style="color: var(--gold); font-weight: 700;">Atlantic Coastline</span>
+            <span style="color: rgba(255,255,255,0.6);">&bull; Natural Heritage</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls & Progress Bar -->
+      <div class="hero-controls">
+        <button type="button" class="hero-ctrl-btn" data-slide-prev aria-label="Previous slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="hero-dots">
+          <button type="button" class="hero-dot is-active" data-slide-dot data-slide-index="0" aria-label="Slide 1"></button>
+          <button type="button" class="hero-dot" data-slide-dot data-slide-index="1" aria-label="Slide 2"></button>
+          <button type="button" class="hero-dot" data-slide-dot data-slide-index="2" aria-label="Slide 3"></button>
+        </div>
+        <button type="button" class="hero-ctrl-btn" data-slide-next aria-label="Next slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+      <div class="hero-progress" data-slide-progress></div>
+    </section>
+
+    <!-- ====================================================================
+         2. CHAIRMAN'S WELCOME MESSAGE (Directly After Hero, Photo-Gated)
+         ==================================================================== -->
+    <section class="section" data-chairman-welcome data-reveal>
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;" class="chairman-grid">
+          <!-- Portrait Left -->
+          <div style="max-width: 440px; margin: 0 auto; width: 100%;">
+            <div class="chairman-portrait-wrap">
+              <img src="/images/chairman.jpg" alt="Executive Chairman Hon. Rauf Ibrahim Kayode Yemaren" class="chairman-portrait-img" width="440" height="550" loading="lazy" decoding="async">
+            </div>
+            <div style="margin-top: 1.25rem; text-align: center;">
+              <span class="fs-small" style="color: var(--text-muted); display: block;">Executive Chairman since 2025 &bull; Vice Chairman 2017&ndash;2025 &bull; B.Sc. LASU</span>
+            </div>
+          </div>
+
+          <!-- Message Right -->
+          <div>
+            <span class="fs-eyebrow">From the Executive Chairman</span>
+            <h2 class="fs-h2" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">
+              A government you can see, feel <span class="italic-accent">and hold to account.</span>
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 1rem; color: var(--text); line-height: 1.7; margin-bottom: 1.75rem;">
+              <p>Dear residents and friends of Badagry West,</p>
+              <p>Welcome to the official website of Badagry West LCDA.</p>
+              <p>
+                Since taking office in 2025, our administration has worked to bring government closer to the people. We are building a modern Primary Healthcare Centre in Asheri and a Computer-Based Test Centre at Ganyingbo Topa. We have extended a helping hand to our widows, our elderly, our traders and our artisans. We have brought back our monthly sanitation exercises and strengthened our partnership with security agencies.
+              </p>
+              <p>
+                Together, we will turn our promise into progress you can see and feel. This website is our commitment to openness. Follow our projects, meet your leaders and tell us your concerns.
+              </p>
+            </div>
+            <div style="border-top: 1px solid var(--border); padding-top: 1.25rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem;">
+              <div>
+                <strong style="font-family: var(--font-display); font-size: 1.15rem; display: block;" data-chairman-name>Hon. Rauf Ibrahim Kayode Yemaren</strong>
+                <span class="fs-small">Executive Chairman, Badagry West LCDA</span>
+              </div>
+              <a href="/leadership/chairman-vice-chairman/#chairman" class="btn btn-secondary btn-sm">Read the full profile &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      @media (min-width: 900px) {
+        .chairman-grid {
+          grid-template-columns: 380px 1fr !important;
+        }
+      }
+    </style>
+
+    <!-- ====================================================================
+         3. QUICK LINKS
+         ==================================================================== -->
+    <div class="container quick-links-wrap" data-reveal>
+      <div class="quick-links-grid">
+        <a href="/contact/feedback-complaints/" class="quick-link-card">
+          <div class="quick-link-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.9375rem; color: var(--text);">Report a Concern</strong>
+            <span class="fs-small">Tell us about community issues</span>
+          </div>
+        </a>
+
+        <a href="/contact/" class="quick-link-card">
+          <div class="quick-link-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.9375rem; color: var(--text);">Contact the Council</strong>
+            <span class="fs-small">Call, WhatsApp or write to us</span>
+          </div>
+        </a>
+
+        <a href="/departments/" class="quick-link-card">
+          <div class="quick-link-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.9375rem; color: var(--text);">Our Departments</strong>
+            <span class="fs-small">Who does what at council</span>
+          </div>
+        </a>
+
+        <a href="/news/" class="quick-link-card">
+          <div class="quick-link-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path></svg>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.9375rem; color: var(--text);">Latest News</strong>
+            <span class="fs-small">Announcements and updates</span>
+          </div>
+        </a>
+
+        <a href="/leadership/legislative-council/#councillors" class="quick-link-card">
+          <div class="quick-link-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.9375rem; color: var(--text);">Ward Councillors</strong>
+            <span class="fs-small">Find your representative</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         4. FLAGSHIP PROJECTS SECTION
+         ==================================================================== -->
+    <section class="section" data-reveal>
+      <div class="container">
+        <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+          <div>
+            <span class="fs-eyebrow">Delivery Portfolio</span>
+            <h2 class="fs-h2" style="margin-top: 0.25rem;">
+              Flagship projects <span class="italic-accent">shaping our communities.</span>
+            </h2>
+            <p class="fs-lead">
+              A closer look at ongoing and completed work under way across healthcare, education, and community infrastructure.
+            </p>
+          </div>
+          <a href="/projects/" class="btn btn-secondary">View all projects &rarr;</a>
+        </div>
+
+        <div class="card-grid">
+          <!-- Flagship 1: Asheri PHC (Ongoing) -->
+          <article class="card">
+            <div style="position: relative; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16 / 10;">
+              <img src="/images/project-asheri-phc-1.jpg" alt="The Primary Health Centre under construction in Asheri" style="width:100%; height:100%; object-fit:cover;" width="640" height="400" loading="lazy">
+              <span class="tag tag-ongoing" style="position: absolute; top: 0.75rem; left: 0.75rem;">
+                <span class="pulse-dot"></span>
+                Ongoing
+              </span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="fs-eyebrow" style="color: var(--gold);">Healthcare</span>
+              <span class="fs-small">Asheri Community</span>
+            </div>
+            <h3 class="fs-h3">Asheri Primary Health Centre</h3>
+            <p class="fs-small">
+              A modern Primary Healthcare Centre is under construction in Asheri to bring essential medical services closer to residents.
+            </p>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="/projects/asheri-primary-health-centre/" class="btn btn-ghost" style="padding-left: 0;">
+                <span>View project record</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Flagship 2: Ganyingbo CBT (Ongoing) -->
+          <article class="card">
+            <div style="position: relative; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16 / 10;">
+              <img src="/images/project-ganyingbo-cbt-1.jpg" alt="The CBT Centre at Ganyingbo Topa" style="width:100%; height:100%; object-fit:cover;" width="640" height="400" loading="lazy">
+              <span class="tag tag-ongoing" style="position: absolute; top: 0.75rem; left: 0.75rem;">
+                <span class="pulse-dot"></span>
+                Ongoing
+              </span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="fs-eyebrow" style="color: var(--gold);">Education</span>
+              <span class="fs-small">Ganyingbo Topa</span>
+            </div>
+            <h3 class="fs-h3">Ganyingbo Topa CBT and Tutorial Centre</h3>
+            <p class="fs-small">
+              A modern Computer-Based Test and Tutorial Centre to equip students preparing for JAMB, WAEC and GCE examinations.
+            </p>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="/projects/ganyingbo-topa-cbt-centre/" class="btn btn-ghost" style="padding-left: 0;">
+                <span>View project record</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Flagship 3: Inner Roads Grading (Ongoing) -->
+          <article class="card">
+            <div style="position: relative; border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16 / 10;">
+              <img src="/images/project-inner-roads.jpg" alt="A graded inner road in Badagry West" style="width:100%; height:100%; object-fit:cover;" width="640" height="400" loading="lazy">
+              <span class="tag tag-ongoing" style="position: absolute; top: 0.75rem; left: 0.75rem;">
+                <span class="pulse-dot"></span>
+                Ongoing
+              </span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="fs-eyebrow" style="color: var(--gold);">Infrastructure</span>
+              <span class="fs-small">Across 5 Wards</span>
+            </div>
+            <h3 class="fs-h3">Inner Roads Grading &amp; Sand-filling</h3>
+            <p class="fs-small">
+              Grading and sand-filling of more than 50 inner roads across the five wards ensuring uninterrupted access for trade and transport.
+            </p>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="/projects/inner-roads-grading-and-sand-filling/" class="btn btn-ghost" style="padding-left: 0;">
+                <span>View project record</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. HISTORY SNAPSHOT
+         ==================================================================== -->
+    <section class="section section--alt" data-reveal>
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center;" class="history-grid">
+          <div>
+            <span class="fs-eyebrow">Our Story</span>
+            <h2 class="fs-h2" style="margin-top: 0.25rem; margin-bottom: 1.25rem;">
+              A council rooted in <span class="italic-accent">community and heritage.</span>
+            </h2>
+            <p class="fs-lead" style="margin-bottom: 1.5rem;">
+              Badagry West LCDA is one of the 37 Local Council Development Areas created in Lagos State to bring government closer to the people.
+            </p>
+            <p class="fs-body" style="color: var(--text-muted); margin-bottom: 1.75rem;">
+              It serves communities across a part of Badagry known for its cultural heritage, its palm-lined coastline and its strategic role connecting Nigeria with the wider West African region.
+            </p>
+            <a href="/about/history/" class="btn btn-secondary">Read our full history &rarr;</a>
+          </div>
+
+          <!-- Milestones Snapshot -->
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-card);">
+            <h3 class="fs-h3" style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem;">Key Milestones</h3>
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div style="display: flex; gap: 1rem;">
+                <span style="font-family: var(--font-display); font-weight: 700; color: var(--gold); font-size: 1.15rem; min-width: 60px;">2003</span>
+                <div>
+                  <strong style="color: var(--text); display: block;">Establishment</strong>
+                  <span class="fs-small">Created as part of Lagos State grassroots local governance reform.</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1rem;">
+                <span style="font-family: var(--font-display); font-weight: 700; color: var(--gold); font-size: 1.15rem; min-width: 60px;">2025</span>
+                <div>
+                  <strong style="color: var(--text); display: block;">Executive Leadership Inauguration</strong>
+                  <span class="fs-small">Inauguration of the 2025 administration to steer public development priorities.</span>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1rem;">
+                <span style="font-family: var(--font-display); font-weight: 700; color: var(--gold); font-size: 1.15rem; min-width: 60px;">2026</span>
+                <div>
+                  <strong style="color: var(--text); display: block;">Delivery Acceleration</strong>
+                  <span class="fs-small">Commissioning of vital rural electrification and primary health upgrades.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      @media (min-width: 900px) {
+        .history-grid {
+          grid-template-columns: 1fr 1fr !important;
+        }
+      }
+    </style>
+
+    <!-- ====================================================================
+         6. LOCAL HIGHLIGHTS
+         ==================================================================== -->
+    <section class="section" data-reveal>
+      <div class="container">
+        <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+          <div>
+            <span class="fs-eyebrow">Discover Badagry West</span>
+            <h2 class="fs-h2" style="margin-top: 0.25rem;">
+              Beaches, border <span class="italic-accent">and boundless heritage.</span>
+            </h2>
+            <p class="fs-lead">
+              From the busy Seme border to quiet stretches of coastline, there is much to explore in Badagry West.
+            </p>
+          </div>
+          <a href="/about/communities-wards/#places-to-visit" class="btn btn-secondary">Explore our communities &rarr;</a>
+        </div>
+
+        <div class="card-grid">
+          <!-- Seme Border -->
+          <article class="card" style="padding: 0; overflow: hidden;">
+            <div style="position: relative; width: 100%; aspect-ratio: 4 / 5;">
+              <img src="/images/place-seme-border.jpg" alt="The Seme border crossing between Nigeria and the Republic of Benin" style="width: 100%; height: 100%; object-fit: cover;" width="400" height="500" loading="lazy">
+              <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.9) 100%);"></div>
+              <div style="position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem; color: #FFFFFF;">
+                <span class="fs-eyebrow" style="color: var(--gold);">Regional Hub</span>
+                <h3 class="fs-h3" style="color: #FFFFFF; margin-top: 0.25rem; margin-bottom: 0.5rem;">Seme Border</h3>
+                <p class="fs-small" style="color: rgba(255,255,255,0.85); line-height: 1.4;">
+                  One of West Africa's busiest international land crossings connecting commerce and communities.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Suntan Beach -->
+          <article class="card" style="padding: 0; overflow: hidden;">
+            <div style="position: relative; width: 100%; aspect-ratio: 4 / 5;">
+              <img src="/images/place-suntan-beach.jpg" alt="Suntan Beach, Badagry" style="width: 100%; height: 100%; object-fit: cover;" width="400" height="500" loading="lazy">
+              <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.9) 100%);"></div>
+              <div style="position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem; color: #FFFFFF;">
+                <span class="fs-eyebrow" style="color: var(--gold);">Coastal Recreation</span>
+                <h3 class="fs-h3" style="color: #FFFFFF; margin-top: 0.25rem; margin-bottom: 0.5rem;">Suntan Beach</h3>
+                <p class="fs-small" style="color: rgba(255,255,255,0.85); line-height: 1.4;">
+                  Popular palm-fringed Atlantic coastline welcoming visitors for leisure and cultural hospitality.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Owode Corridor -->
+          <article class="card" style="padding: 0; overflow: hidden;">
+            <div style="position: relative; width: 100%; aspect-ratio: 4 / 5;">
+              <img src="/images/place-owode.jpg" alt="Owode corridor in Badagry West" style="width: 100%; height: 100%; object-fit: cover;" width="400" height="500" loading="lazy">
+              <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(10,10,10,0.9) 100%);"></div>
+              <div style="position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem; color: #FFFFFF;">
+                <span class="fs-eyebrow" style="color: var(--gold);">Trade Corridor</span>
+                <h3 class="fs-h3" style="color: #FFFFFF; margin-top: 0.25rem; margin-bottom: 0.5rem;">Owode-Apa Axis</h3>
+                <p class="fs-small" style="color: rgba(255,255,255,0.85); line-height: 1.4;">
+                  Vital transportation and commercial lifeline linking historical settlements with regional trade routes.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. DEPARTMENTS TEASER
+         ==================================================================== -->
+    <section class="section section--alt" data-reveal>
+      <div class="container">
+        <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+          <div>
+            <span class="fs-eyebrow">Service Network</span>
+            <h2 class="fs-h2" style="margin-top: 0.25rem;">
+              Departments shaping <span class="italic-accent">everyday governance.</span>
+            </h2>
+            <p class="fs-lead">
+              Dedicated offices working across planning, health, education, public works, environment and community welfare.
+            </p>
+          </div>
+          <a href="/departments/" class="btn btn-secondary">View all departments &rarr;</a>
+        </div>
+
+        <div class="card-grid">
+          <!-- Cluster 1: Public Services & Business -->
+          <article class="card">
+            <div class="quick-link-icon" style="width: 48px; height: 48px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <h3 class="fs-h3">Public Services &amp; Business</h3>
+            <p class="fs-small">
+              Coordinating revenue administration, commercial permits, markets and parks oversight, and technology operations.
+            </p>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="/departments/public-services-business/" class="btn btn-ghost" style="padding-left: 0;">
+                <span>Explore services</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Cluster 2: Health, Education & Welfare -->
+          <article class="card">
+            <div class="quick-link-icon" style="width: 48px; height: 48px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3 class="fs-h3">Health, Education &amp; Welfare</h3>
+            <p class="fs-small">
+              Guiding primary healthcare services, educational coaching, library support, and social welfare for vulnerable residents.
+            </p>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="/departments/health-education-welfare/" class="btn btn-ghost" style="padding-left: 0;">
+                <span>Explore services</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Cluster 3: Works, Environment & Agriculture -->
+          <article class="card">
+            <div class="quick-link-icon" style="width: 48px; height: 48px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3 class="fs-h3">Works, Environment &amp; Agriculture</h3>
+            <p class="fs-small">
+              Managing road rehabilitation, environmental sanitation exercises, flood control drainage, and rural agricultural development.
+            </p>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="/departments/works-environment-agriculture/" class="btn btn-ghost" style="padding-left: 0;">
+                <span>Explore services</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. LATEST NEWS & UPDATES
+         ==================================================================== -->
+    <section class="section" data-reveal>
+      <div class="container">
+        <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+          <div>
+            <span class="fs-eyebrow">Public Record</span>
+            <h2 class="fs-h2" style="margin-top: 0.25rem;">
+              Recent announcements, <span class="italic-accent">programmes and updates.</span>
+            </h2>
+            <p class="fs-lead">
+              Follow project launches, public social programmes and official notices from the council.
+            </p>
+          </div>
+          <a href="/news/" class="btn btn-secondary">View all news &rarr;</a>
+        </div>
+
+        <div class="card-grid">
+          <!-- News 1 -->
+          <article class="card">
+            <div style="border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16 / 10;">
+              <img src="/images/hero-1-secretariat.jpg" alt="Executive Chairman and councillors sworn in" style="width: 100%; height: 100%; object-fit: cover;" width="640" height="400" loading="lazy">
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="tag tag-completed">News</span>
+              <span class="fs-small">27 July 2025</span>
+            </div>
+            <h3 class="fs-h3">Executive Chairman and Councillors Sworn In</h3>
+            <p class="fs-small">
+              The newly elected Executive leadership of Badagry West LCDA was inaugurated to steer grassroots governance and public service.
+            </p>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="/news/executive-chairman-and-councillors-sworn-in/" class="btn btn-ghost" style="padding-left: 0;">
+                <span>Read announcement</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- News 2 -->
+          <article class="card">
+            <div style="border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16 / 10;">
+              <img src="/images/vice-chairman.jpg" alt="Vice Chairman sworn in" style="width: 100%; height: 100%; object-fit: cover;" width="640" height="400" loading="lazy">
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="tag tag-completed">Announcements</span>
+              <span class="fs-small">15 November 2025</span>
+            </div>
+            <h3 class="fs-h3">Vice Chairman Sworn In</h3>
+            <p class="fs-small">
+              The Vice Chairman took the oath of office following legislative clearance to oversee the Works, Housing and Infrastructure portfolio.
+            </p>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="/news/vice-chairman-sworn-in/" class="btn btn-ghost" style="padding-left: 0;">
+                <span>Read announcement</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- News 3 -->
+          <article class="card">
+            <div style="border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16 / 10;">
+              <img src="/images/empower-tools.jpg" alt="Council launches 100-day empowerment drive" style="width: 100%; height: 100%; object-fit: cover;" width="640" height="400" loading="lazy">
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="tag tag-completed">News</span>
+              <span class="fs-small">10 December 2025</span>
+            </div>
+            <h3 class="fs-h3">Council Launches 100-Day Empowerment Drive</h3>
+            <p class="fs-small">
+              Marking the first 100 days of the administration, an empowerment drive supported artisans with work tools and cash assistance.
+            </p>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="/news/council-launches-100-day-empowerment-drive/" class="btn btn-ghost" style="padding-left: 0;">
+                <span>Read announcement</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         9. COUNCILLORS BY WARD (Photo-Gated Runtime Population)
+         ==================================================================== -->
+    <section class="section section--alt" data-councillors-section data-reveal>
+      <div class="container">
+        <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;">
+          <div>
+            <span class="fs-eyebrow">Ward Representation</span>
+            <h2 class="fs-h2" style="margin-top: 0.25rem;">
+              Representing every ward, <span class="italic-accent">serving every community.</span>
+            </h2>
+            <p class="fs-lead">
+              Meet the councillors who bring your community's voice to the Badagry West Legislative Council.
+            </p>
+          </div>
+          <a href="/leadership/legislative-council/#councillors" class="btn btn-secondary">View all councillors &rarr;</a>
+        </div>
+
+        <!-- Rendered dynamically by js/people.js ONLY when photo exists -->
+        <div class="card-grid" data-councillors-grid></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         10. EMERGENCY NUMBERS STRIP
+         ==================================================================== -->
+    <section class="section" data-reveal>
+      <div class="container">
+        <div style="background: var(--surface); border: 1.5px solid var(--gold); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-card); text-align: center; max-width: 860px; margin: 0 auto;">
+          <span class="fs-eyebrow" style="color: var(--gold);">Lagos State Helplines</span>
+          <h2 class="fs-h2" style="margin-top: 0.5rem; margin-bottom: 1rem;">
+            Emergency assistance, <span class="italic-accent">available 24 hours.</span>
+          </h2>
+          <p class="fs-body" style="color: var(--text-muted); max-width: 620px; margin: 0 auto 2rem;">
+            In an emergency, call 767 or 112. These Lagos State toll-free lines are open 24 hours a day. Please use them only for real emergencies.
+          </p>
+          <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="tel:767" class="btn btn-primary" style="font-size: 1.25rem; font-family: var(--font-display); height: 54px; padding: 0 2rem;">
+              <span>&#x260E;</span> Call 767
+            </a>
+            <a href="tel:112" class="btn btn-primary" style="font-size: 1.25rem; font-family: var(--font-display); height: 54px; padding: 0 2rem;">
+              <span>&#x260E;</span> Call 112
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         11. CONTACT BLOCK WITH MESSAGE FORM
+         ==================================================================== -->
+    <section class="section section--alt" data-reveal>
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;" class="contact-grid">
+          <!-- Left: Details -->
+          <div>
+            <span class="fs-eyebrow">Connect With Us</span>
+            <h2 class="fs-h2" style="margin-top: 0.25rem; margin-bottom: 1.25rem;">
+              Reach the <span class="italic-accent">council office.</span>
+            </h2>
+            <p class="fs-lead" style="margin-bottom: 2rem;">
+              For enquiries, feedback and formal communication, connect with the council secretariat.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <div>
+                <strong style="color: var(--text); display:block; font-size: 0.9375rem;">Secretariat Address:</strong>
+                <p class="fs-small">Council Secretariat, Owode-Apa Road, Kankon, Badagry, Lagos State</p>
+              </div>
+              <div>
+                <strong style="color: var(--text); display:block; font-size: 0.9375rem;">Call / WhatsApp:</strong>
+                <a href="tel:+2348037619499" style="color: var(--gold); text-decoration: none; font-size: 0.9375rem;">+234 803 761 9499</a>
+              </div>
+              <div>
+                <strong style="color: var(--text); display:block; font-size: 0.9375rem;">Official Email:</strong>
+                <a href="mailto:support@omoadugbo.com" style="color: var(--gold); text-decoration: none; font-size: 0.9375rem;">support@omoadugbo.com</a>
+              </div>
+              <div>
+                <strong style="color: var(--text); display:block; font-size: 0.9375rem;">Office Hours:</strong>
+                <p class="fs-small">Monday to Friday, 8:00 AM – 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Short Contact Form -->
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-card);">
+            <h3 class="fs-h3" style="margin-bottom: 0.5rem;">Send us a message</h3>
+            <p class="fs-small" style="margin-bottom: 1.5rem;">We will direct your enquiry to the appropriate council office.</p>
+
+            <!-- Notice for Phase 3 (Form submission pipeline configured in Phase 9) -->
+            <div style="background: var(--gold-soft); border: 1px solid rgba(201, 162, 39, 0.3); border-radius: var(--radius-sm); padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.8125rem; color: var(--accent-text);">
+              Our message service is being set up. Please call or WhatsApp +234 803 761 9499 or email support@omoadugbo.com.
+            </div>
+
+            <form style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="form-group">
+                <label for="c-name" class="form-label">Full Name</label>
+                <input type="text" id="c-name" class="form-input" placeholder="Your name" required disabled>
+              </div>
+              <div class="form-group">
+                <label for="c-email" class="form-label">Email Address</label>
+                <input type="email" id="c-email" class="form-input" placeholder="your.email@example.com" required disabled>
+              </div>
+              <div class="form-group">
+                <label for="c-message" class="form-label">Message</label>
+                <textarea id="c-message" class="form-input" style="height: 100px; padding: 0.75rem 1rem;" placeholder="How can the council help you?" required disabled></textarea>
+              </div>
+              <button type="button" class="btn btn-primary is-disabled" disabled style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      @media (min-width: 900px) {
+        .contact-grid {
+          grid-template-columns: 1fr 1.1fr !important;
+        }
+      }
+    </style>
+  </main>
+
+  <!-- Shared Footer Injection Placeholder -->
+  <div data-layout-footer></div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/people.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

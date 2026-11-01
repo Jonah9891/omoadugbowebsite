@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "executive-chairman-and-councillors-sworn-in",
+    "title": "Executive Chairman and Councillors Sworn In",
+    "category": "news",
+    "categoryName": "News",
+    "date": "2025-07-27",
+    "dateDisplay": "27 July 2025",
+    "excerpt": "Executive Chairman alongside five councillors took the oath of office before the Governor of Lagos State.",
+    "body": [
+      "The newly elected Executive leadership of Badagry West LCDA was inaugurated to steer the grassroots governance and socioeconomic development of the council area."
+    ],
+    "images": ["hero-1-secretariat.jpg"]
+  },
+  {
+    "slug": "vice-chairman-sworn-in",
+    "title": "Vice Chairman Sworn In",
+    "category": "announcements",
+    "categoryName": "Official Announcements",
+    "date": "2025-11-15",
+    "dateDisplay": "15 November 2025",
+    "excerpt": "The Vice Chairman took the oath of office following legislative clearance to oversee Works, Housing and Infrastructure.",
+    "body": [
+      "In November 2025, the oath of office was administered following unanimous screening and legislative clearance by the Legislative Council."
+    ],
+    "images": ["vice-chairman.jpg"]
+  },
+  {
+    "slug": "council-launches-100-day-empowerment-drive",
+    "title": "Council Launches 100-Day Empowerment Drive",
+    "category": "news",
+    "categoryName": "News",
+    "date": "2025-12-10",
+    "dateDisplay": "10 December 2025",
+    "excerpt": "Artisans received professional work tools, cash grants delivered to widows, the elderly and persons with disabilities.",
+    "body": [
+      "Marking the first 100 days of the administration, a comprehensive social intervention programme delivered tools and grants across all five wards."
+    ],
+    "images": ["empower-tools.jpg"]
+  }
+]
+

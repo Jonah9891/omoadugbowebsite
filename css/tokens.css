@@ -1,0 +1,69 @@
+:root {
+  /* shared */
+  --gold: #C9A227;
+  --gold-bright: #DDB93A;
+  --green: #00E08A;
+  --on-gold: #0A0A0A;
+  --on-green: #0A0A0A;
+
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --t-fast: 200ms;
+  --t-base: 300ms;
+  --t-slow: 600ms;
+
+  --container: 1240px;
+  --header-h: 76px;
+}
+
+/* DARK (default if device prefers dark and no saved choice) */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0A0A0A;
+  --bg-alt: #101010;
+  --surface: #141414;
+  --surface-2: #1C1C1C;
+  --border: rgba(255, 255, 255, .10);
+  --border-strong: rgba(255, 255, 255, .18);
+  --text: #F5F5F2;
+  --text-muted: #A8A8A0;
+  --accent-text: #C9A227;       /* gold text */
+  --accent-green-text: #00E08A; /* green text */
+  --gold-soft: rgba(201, 162, 39, .14);
+  --green-soft: rgba(0, 224, 138, .14);
+  --shadow-card: 0 1px 0 rgba(255,255,255,.04) inset, 0 18px 40px rgba(0,0,0,.45);
+  --glow-gold: 0 0 0 1px rgba(201,162,39,.45), 0 12px 40px rgba(201,162,39,.18);
+  --glow-green: 0 0 0 2px rgba(0,224,138,.55);
+  --header-bg: rgba(10, 10, 10, .72);
+  --overlay: linear-gradient(180deg, rgba(10,10,10,.15) 0%, rgba(10,10,10,.85) 100%);
+}
+
+/* LIGHT */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #FFFFFF;
+  --bg-alt: #FAF8F3;
+  --surface: #FFFFFF;
+  --surface-2: #F3EFE4;
+  --border: rgba(10, 10, 10, .10);
+  --border-strong: rgba(10, 10, 10, .20);
+  --text: #0A0A0A;
+  --text-muted: #5C5C55;
+  --accent-text: #8A6D0B;       /* darker gold for small text (4.9:1 on white) */
+  --accent-green-text: #007A4D; /* darker green for small text (5.4:1 on white) */
+  --gold-soft: rgba(201, 162, 39, .14);
+  --green-soft: rgba(0, 224, 138, .16);
+  --shadow-card: 0 1px 2px rgba(10,10,10,.05), 0 14px 34px rgba(10,10,10,.08);
+  --glow-gold: 0 0 0 1px rgba(201,162,39,.55), 0 12px 34px rgba(201,162,39,.20);
+  --glow-green: 0 0 0 2px rgba(0,160,100,.55);
+  --header-bg: rgba(255, 255, 255, .78);
+  --overlay: linear-gradient(180deg, rgba(10,10,10,.10) 0%, rgba(10,10,10,.78) 100%);
+}
+
