@@ -25,14 +25,13 @@
       "title": "Hon.",
       "name": "Sesi Ogungbe Yusuf",
       "position": "Vice Chairman",
-      "portfolio": "Supervisor for Works, Housing and Infrastructure",
+      "portfolio": "",
       "group": "executive",
       "image": "vice-chairman.jpg",
       "summary": "Supports the Executive Chairman and oversees the Works, Housing and Infrastructure portfolio.",
       "order": 2,
       "confirm": false
     },
-
     {
       "id": "slg",
       "title": "",
@@ -117,7 +116,6 @@
       "order": 7,
       "confirm": false
     },
-
     {
       "id": "adviser-mauyon",
       "title": "Mr.",
@@ -142,7 +140,6 @@
       "order": 2,
       "confirm": false
     },
-
     {
       "id": "sup-dansuki",
       "title": "Mr.",
@@ -323,7 +320,6 @@
       "order": 15,
       "confirm": false
     },
-
     {
       "id": "councillor-johnson",
       "title": "Hon.",
