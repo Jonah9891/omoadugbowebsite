@@ -1,7 +1,7 @@
 /**
  * Badagry West LCDA - Scroll Reveal Animations
  * Uses IntersectionObserver to smoothly reveal elements with [data-reveal]
- * Automatically tags section text, cards, and media for seamless scrolling animation.
+ * Automatically tags section text, headings, cards, and images for seamless scrolling animation.
  * Respects prefers-reduced-motion: reduce.
  */
 
@@ -11,15 +11,20 @@
   function initReveal() {
     var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Automatically tag section headings, leads, cards, and main images if not explicitly tagged
+    // Comprehensive selector targeting headings, text paragraphs, cards, and pictures/images across all pages
     var autoTargets = document.querySelectorAll(
       'section .section-header, section .section-eyebrow, section .section-title, section .section-lead, ' +
+      'section p, section h2, section h3, section h4, ' +
       'section .card, section .portrait-card, section .album-card, section .feature-card, section .stat-item, ' +
-      '.page-opener-inner, .chairman-welcome-content, .chairman-welcome-portrait'
+      'section .gallery-card, section .project-card, section .news-card, ' +
+      '.page-opener-inner, .chairman-welcome-content, .chairman-welcome-portrait, ' +
+      'section figure, section picture, section img:not(.site-logo-img):not(.footer-crest-img), ' +
+      '.leadership-portrait-wrap, .project-detail-gallery, .quick-link-card'
     );
 
     autoTargets.forEach(function (el) {
-      if (!el.hasAttribute('data-reveal')) {
+      // Avoid tagging tiny icons or interior child text of already tagged cards
+      if (!el.closest('.site-header') && !el.closest('.site-footer') && !el.hasAttribute('data-reveal')) {
         el.setAttribute('data-reveal', '');
       }
     });
@@ -42,8 +47,8 @@
       });
     }, {
       root: null,
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.08
+      rootMargin: '0px 0px -30px 0px',
+      threshold: 0.05
     });
 
     elements.forEach(function (el) {
