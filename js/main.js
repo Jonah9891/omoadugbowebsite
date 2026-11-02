@@ -391,11 +391,14 @@
   function injectLayout() {
     // 0. Initialize animated preloader
     handlePreloader();
-    // 1. Inject Header if placeholder element exists or at top of body
+    // 1. Inject Header: replace placeholder or empty <header>, or insert at top of body
     var headerContainer = document.querySelector('[data-layout-header]');
+    var existingHeader = document.querySelector('header.site-header, #site-header, header');
     if (headerContainer) {
       headerContainer.outerHTML = getHeaderHTML();
-    } else if (!document.querySelector('.site-header')) {
+    } else if (existingHeader) {
+      existingHeader.outerHTML = getHeaderHTML();
+    } else {
       document.body.insertAdjacentHTML('afterbegin', getHeaderHTML());
     }
 
