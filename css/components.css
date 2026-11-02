@@ -363,13 +363,18 @@
 }
 
 .btn-primary {
-  background-color: var(--gold);
-  color: var(--on-gold);
-  border: 1px solid var(--gold);
+  background: var(--gold-gradient);
+  color: #0A0A0A;
+  border: 1px solid var(--gold-bright);
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
 }
 
 .btn-primary:hover {
-  background-color: var(--gold-bright);
+  background: var(--gold-gradient-hover);
+  color: #0A0A0A;
+  border-color: var(--gold-bright);
   transform: translateY(-2px);
   box-shadow: var(--glow-gold);
 }
@@ -728,17 +733,24 @@
 /* --------------------------------------------------------------------------
    10. Scroll Reveal Animations (reveal.js)
    -------------------------------------------------------------------------- */
+/* Soft downward entrance animation on scroll: starts slightly above (-18px) and softly floats down to place */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity var(--t-slow) var(--ease),
-              transform var(--t-slow) var(--ease);
+  transform: translateY(-18px);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
 [data-reveal].is-revealed {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Delay modifiers for sequenced cascading elements */
+[data-reveal-delay="100"] { transition-delay: 100ms; }
+[data-reveal-delay="200"] { transition-delay: 200ms; }
+[data-reveal-delay="300"] { transition-delay: 300ms; }
 
 
 
@@ -860,9 +872,9 @@
 }
 
 .hero-ctrl-btn:hover {
-  background: var(--gold);
+  background: var(--gold-gradient);
   color: #0A0A0A;
-  border-color: var(--gold);
+  border-color: var(--gold-bright);
 }
 
 .hero-dots {
@@ -1507,9 +1519,10 @@
 }
 
 .share-pill-btn:hover {
-  background: var(--gold);
-  color: var(--on-gold);
-  border-color: var(--gold);
+  background: var(--gold-gradient);
+  color: #0A0A0A;
+  border-color: var(--gold-bright);
+  font-weight: 700;
   transform: translateY(-2px);
 }
 

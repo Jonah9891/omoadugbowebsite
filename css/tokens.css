@@ -4,6 +4,10 @@
   --gold-bright: #DDB93A;
   --green: #00E08A;
   --on-gold: #0A0A0A;
+  --gold-dark: #A68018;
+  --gold-gradient: linear-gradient(135deg, #E2C048 0%, #C9A227 50%, #A68018 100%);
+  --gold-gradient-hover: linear-gradient(135deg, #A68018 0%, #C9A227 50%, #E2C048 100%);
+
   --on-green: #0A0A0A;
 
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
